@@ -1,5 +1,1 @@
-import Foundation
-
-let n = Int(readLine()!)!
-
-print(Array(repeating: "long", count: n/4).joined(separator: " "), "int")
+print(String(repeating: "long ", count: Int(readLine()!)!/4)+"int")
