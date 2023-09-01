@@ -49,7 +49,7 @@ let dx = [-1, 1, 0, 0, 0, 0]
 let dy = [0, 0, -1, 1, 0, 0]
 let dz = [0, 0, 0, 0, -1, 1]
 
-func dfs(_ z: Int, _ y: Int, _ x: Int) {
+func bfs(_ z: Int, _ y: Int, _ x: Int) {
     visited[z][y][x] = true
     
     for i in 0..<6 {
@@ -90,7 +90,7 @@ func solution() -> Int {
         let j = current[1]
         let k = current[2]
         if !visited[i][j][k] && tomato[i][j][k] > 0 {
-            dfs(i, j, k)
+            bfs(i, j, k)
         }
     }
 
